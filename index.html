@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,120 @@
     <link rel="stylesheet" href="style.css">
     <meta name="author" content="Lux Alexander">
 </head>
+
 <body>
     <header>
-            <a href="#">Subscribe</a>
-            <h1>Headline</h1>
-            <button>Sign up</button>          
-         </header>
-         <hr>
-         <div class="nav-container">
-            <div class="burger">&#9776;
-            </diV>
-            <ul class="menu">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Video</a></li>
-               <li><a href="#">Audio</a></li>
-               <li><a href="#">Topics</a></li>
-               <li><a href="#">Latest</a></li>
-               <li><a href="#">Editors' Picks</a></li>
-            </ul>
+        <h1>Portfolio</h1>
+        <h2>by Lux Alexander</h2>
+    </header>
+    <hr>
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()">
+            &#9776;
+        </a>
+        <button>Sign up</button>
+        <a href="#top">Subscribe</a>
+    </div>
+    <script src="menu.js"></script>
+
+    <section class="introduction">
+        <h2>Welcome to my Blog</h2>
+        <p>This is a simple blog template built with HTML and CSS. It includes a responsive navigation menu, a chat
+            widget, featured posts, and a skills section.</p>
+    </section>
+
+
+    <section class="chat">
+        <h2>Chat Widget</h2>
+
+        <div id="chat-messages"></div>
+        <form id="chat-form">
+
+            <label for="name">Enter your name:</label><br><br>
+            <input type="text" name="name" placeholder="Name" id="chat-name" required><br><br>
+
+            <label for="message">Enter your message:</label><br><br>
+            <input type="text" name="message" placeholder="message" id="chat-msg" required><br><br>
+
+            <!--<input type="picture" name="picture" placeholder="picture URL" id="chat-pic"><br><br>-->
+
+            <input type="submit" value="Send">
+        </form>
+        <script src="https://web.it.fh-salzburg.ac.at/static/chat.js"></script>
+    </section>
+
+    <section class="posts">
+        <div class="featured-post">
+            <div>
+                <a href="#" class="category">World</a>
+                <h2>Featured post</h2>
+                <time datetime="2025-11-12">Nov 12</time>
+                <p>This is a wider card with supporting
+                    text below as a natural lead-in to
+                    additional content.
+                </p>
+                <a href="https://github.com/LuxAlexander/Gaia"><small>Continue reading</small></a>
+            </div>
+            <div class="post-image">
+                <img src="https://via.placeholder.com/200" alt="">
+            </div>
         </div>
-         
-    <div id="chat-messages"></div>
-    <form id="chat-form">
 
-        <label for="name">Enter your name:</label><br><br>
-        <input type="text"  name="name" placeholder="Name" id="chat-name" required><br><br>
+        <div class="featured-post">
+            <div>
+                <a href="#" class="category">World</a>
+                <h2>Featured post</h2>
+                <time datetime="2025-11-12">Nov 12</time>
+                <p>This is a wider card with supporting
+                    text below as a natural lead-in to
+                    additional content.
+                </p>
+                <a href="https://github.com/LuxAlexander/FirstWebsite"><small>Continue reading</small></a>
+            </div>
+            <div class="post-image">
+                <img src="https://via.placeholder.com/200" alt="">
+            </div>
+        </div>
+        <div class="featured-post">
+            <div>
+                <a href="#" class="category">World</a>
+                <h2>Featured post</h2>
+                <time datetime="2025-11-12">Nov 12</time>
+                <p>This is a wider card with supporting
+                    text below as a natural lead-in to
+                    additional content.
+                </p>
+                <a href="https://github.com/LuxAlexander/aufgabenSWE"><small>Continue reading</small></a>
+            </div>
+            <div class="post-image">
+                <img src="https://via.placeholder.com/200" alt="">
+            </div>
+        </div>
+    </section>
 
-        <label for="message">Enter your message:</label><br><br>
-        <input type="text" name="message" placeholder="message" id="chat-msg" required><br><br>
+    <section class="skills">
+        <h1>My Skills</h1>
+        <p>HTML</p>
+        <div class="container">
+            <div class="skill html">80%</div>
+        </div>
 
-        <!--<input type="picture" name="picture" placeholder="picture URL" id="chat-pic"><br><br>-->
+        <p>PHP</p>
+        <div class="container">
+            <div class="skill php"> 60% </div>
+        </div>
+    </section>
 
-        <input type="submit" value="Send">
-    </form>
+    <footer>
+        <p>Lux Alexander 2025 <a href="#">webtech </a></p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
 
-    <script src="https://web.it.fh-salzburg.ac.at/static/chat.js"></script>
 </body>
+
 </html>
