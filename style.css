@@ -1,0 +1,41 @@
+/* Chat styles (unchanged) */
+#chat-messages {
+  height: 250px;
+  width: 50%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+#chat-messages > p > span:nth-child(1) {
+  display: none;
+}
+
+#chat-messages > p > span:nth-child(2) {
+  font-weight: bold;
+  color: turquoise;
+}
+
+.burger {
+display: none;
+font-size: 30px;
+cursor: pointer;
+}
+@media (max-width: 768px) {
+.burger {
+display: block;
+}
+.menu {
+display: none;
+background-color: #f9f9f9;
+}
+.burger:active + .menu,
+.burger:hover + .menu,
+.menu:hover{
+display: flex;
+flex-direction: column;
+
+}
+}
