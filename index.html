@@ -1,126 +1,207 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+
+    <title>Responsive Portfolio – Lux Alexander</title>
+
     <link rel="stylesheet" href="style.css">
-    <meta name="author" content="Lux Alexander">
+    <link rel="icon" type="image/png" href="flower_icon.svg">
+    <meta name="author" content="Alexander Lux">
 </head>
 
 <body>
-    <header>
-        <h1>Portfolio</h1>
-        <h2>by Lux Alexander</h2>
+
+    <header id="home">
+        <h1>Alexander Lux</h1>
+        <p>Software Engineer | Full Stack Developer</p>
+        <p>Bischofshofen, Austria</p>
     </header>
-    <hr>
 
-    <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()">
-            &#9776;
-        </a>
-        <button>Sign up</button>
-        <a href="#top">Subscribe</a>
-    </div>
-    <script src="menu.js"></script>
-
-    <section class="introduction">
-        <h2>Welcome to my Blog</h2>
-        <p>This is a simple blog template built with HTML and CSS. It includes a responsive navigation menu, a chat
-            widget, featured posts, and a skills section.</p>
-    </section>
+    <nav id="navbar">
+        <div class="logo">Lux</div>
+        <div class="links" id="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
 
 
-    <section class="chat">
-        <h2>Chat Widget</h2>
+    <main>
+        <div class="content-col">
 
-        <div id="chat-messages"></div>
-        <form id="chat-form">
-
-            <label for="name">Enter your name:</label><br><br>
-            <input type="text" name="name" placeholder="Name" id="chat-name" required><br><br>
-
-            <label for="message">Enter your message:</label><br><br>
-            <input type="text" name="message" placeholder="message" id="chat-msg" required><br><br>
-
-            <!--<input type="picture" name="picture" placeholder="picture URL" id="chat-pic"><br><br>-->
-
-            <input type="submit" value="Send">
-        </form>
-        <script src="https://web.it.fh-salzburg.ac.at/static/chat.js"></script>
-    </section>
-
-    <section class="posts">
-        <div class="featured-post">
-            <div>
-                <a href="#" class="category">World</a>
-                <h2>Featured post</h2>
-                <time datetime="2025-11-12">Nov 12</time>
-                <p>This is a wider card with supporting
-                    text below as a natural lead-in to
-                    additional content.
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am a software engineer based in Austria (Nationality: Austrian).
+                    I graduated from <strong>HTL Saalfelden</strong> with a diploma in Electronics and Computer
+                    Engineering, specializing in
+                    Information and Communication Technologies. My academic focus included programming, software
+                    engineering, and database systems.
                 </p>
-                <a href="https://github.com/LuxAlexander/Gaia"><small>Continue reading</small></a>
-            </div>
-            <div class="post-image">
-                <img src="https://via.placeholder.com/200" alt="">
-            </div>
-        </div>
-
-        <div class="featured-post">
-            <div>
-                <a href="#" class="category">World</a>
-                <h2>Featured post</h2>
-                <time datetime="2025-11-12">Nov 12</time>
-                <p>This is a wider card with supporting
-                    text below as a natural lead-in to
-                    additional content.
+                <br>
+                <p>
+                    <strong>Thesis:</strong> Development, programming, and implementation of an interactive digital
+                    hiking app for the "Erz der Alpen" UNESCO Global Geopark.
                 </p>
-                <a href="https://github.com/LuxAlexander/FirstWebsite"><small>Continue reading</small></a>
-            </div>
-            <div class="post-image">
-                <img src="https://via.placeholder.com/200" alt="">
-            </div>
-        </div>
-        <div class="featured-post">
-            <div>
-                <a href="#" class="category">World</a>
-                <h2>Featured post</h2>
-                <time datetime="2025-11-12">Nov 12</time>
-                <p>This is a wider card with supporting
-                    text below as a natural lead-in to
-                    additional content.
-                </p>
-                <a href="https://github.com/LuxAlexander/aufgabenSWE"><small>Continue reading</small></a>
-            </div>
-            <div class="post-image">
-                <img src="https://via.placeholder.com/200" alt="">
-            </div>
-        </div>
-    </section>
+            </section>
+            <section id="projects">
+                <h2>Featured Projects</h2>
+                <div class="cards">
 
-    <section class="skills">
-        <h1>My Skills</h1>
-        <p>HTML</p>
-        <div class="container">
-            <div class="skill html">80%</div>
+                    <div class="card">
+                        <h3>Gaia</h3>
+                        <img src="card_images/earth.svg" alt="Gaia">
+                        <p>Implementation of the interactive digital hiking app for the UNESCO Global Geopark. Features
+                            geolocation and interactive mapping.</p>
+                        <a class="card-link" href="https://github.com/LuxAlexander/Gaia" target="_blank">View Repository
+                            &rarr;</a>
+                    </div>
+
+                    <div class="card">
+                        <h3>FirstWebsite</h3>
+                        <img src="card_images/web.svg" alt="FirstWebsite">
+                        <p>Foundational web development projects utilizing HTML, CSS, and basic PHP structure.
+                            Demonstrates core web concepts.</p>
+                        <a class="card-link" href="https://github.com/LuxAlexander/FirstWebsite" target="_blank">View
+                            Repository &rarr;</a>
+                    </div>
+
+                    <div class="card">
+                        <h3>Aufgaben SWE</h3>
+                        <img src="card_images/incognito.svg" alt="Aufgaben SWE">
+                        <p>Software Engineering coursework from HTL Saalfelden. Includes Java, C++, and system planning
+                            exercises and algorithms.</p>
+                        <a class="card-link" href="https://github.com/LuxAlexander/aufgabenSWE" target="_blank">View
+                            Repository &rarr;</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Internship / Work Experience</h2>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">01/2024 - 04/2024</span>
+                    <div class="timeline-title">Grenzschutzbeamter (Border Guard)</div>
+                    <div class="timeline-company">Österreichisches Bundesheer | Rosegg, Austria</div>
+                    <ul class="timeline-tasks">
+                        <li>Border control and monitoring of the command post</li>
+                        <li>Arrest of illegal immigrants</li>
+                        <li>Support activities in supply/logistics</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">06/2022 - 07/2023</span>
+                    <div class="timeline-title">Operations & IT Coordinator</div>
+                    <div class="timeline-company">Weltladen | Bischofshofen, Austria</div>
+                    <ul class="timeline-tasks">
+                        <li>Maintenance of accounting software and technical infrastructure</li>
+                        <li>Recording current business transactions</li>
+                        <li>Customer consultation and staff training</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">07/2021 - 08/2021</span>
+                    <div class="timeline-title">Intern (SAP/ERP Systems)</div>
+                    <div class="timeline-company">DigiLab Porsche Informatik GmbH | Salzburg, Austria</div>
+                    <ul class="timeline-tasks">
+                        <li>Development of programs in ABBA for SAP</li>
+                        <li>Testing and Quality Management</li>
+                        <li>Documentation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>My Skills</h2>
+
+                <p><strong>Programming Languages</strong></p>
+                <div class="skill-list">
+                    <span class="skill-tag">Java / JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C / C++ / C#</span>
+                    <span class="skill-tag">ABBA (SAP)</span>
+                    <span class="skill-tag">PHP</span>
+                </div>
+
+                <p><strong>Web & Databases</strong></p>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML & CSS</span>
+                    <span class="skill-tag">WordPress</span>
+                    <span class="skill-tag">SQL / MariaDB</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+
+                <p><strong>Skill Levels</strong></p>
+                <p>Video Games</p>
+                <div class="skill-container">
+                    <div class="skill" id="games">100%</div>
+                </div>
+                <p>Programming</p>
+                <div class="skill-container">
+                    <div class="skill" id="programming">90%</div>
+                </div>
+                <p>Databases</p>
+                <div class="skill-container">
+                    <div class="skill" id="databases">80%</div>
+                </div>
+                <p>Web Development</p>
+                <div class="skill-container">
+                    <div class="skill" id="web-development">60%</div>
+                </div>
+                <p>Design</p>
+                <div class="skill-container">
+                    <div class="skill" id="design">40%</div>
+                </div>
+            </section>
         </div>
 
-        <p>PHP</p>
-        <div class="container">
-            <div class="skill php"> 60% </div>
-        </div>
-    </section>
+        <aside>
+            <h2>Chat Widget</h2>
 
-    <footer>
-        <p>Lux Alexander 2025 <a href="#">webtech </a></p>
-        <p><a href="#top">Back to top</a></p>
+            <div id="chat-messages"></div>
+            <br>
+
+            <form id="chat-form">
+                <label for="chat-name">Enter your name:</label>
+                <br>
+                <input type="text" name="name" placeholder="Name" id="chat-name" required>
+                <br><br>
+                <label for="chat-msg">Enter your message:</label>
+                <br>
+                <input type="text" name="message" placeholder="message" id="chat-msg" required>
+                <br><br><!--
+                <label for="image-input">Upload an image:</label>
+                <input type="file" name="message"  id="image-input" accept="image/*">-->
+
+
+                <input type="submit" value="Send">
+            </form>
+        </aside>
+
+    </main>
+
+
+    <footer id="contact">
+        <p>&copy; 2025 Lux Alexander — Portfolio</p>
     </footer>
+
+    <script src="menu.js"></script>
+    <script src="https://web.it.fh-salzburg.ac.at/static/chat.js"></script>
 
 </body>
 
