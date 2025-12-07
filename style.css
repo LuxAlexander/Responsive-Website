@@ -21,6 +21,22 @@
   box-sizing: border-box;
 }
 
+input[type="submit"] {
+  background-color: var(--dark);
+  /* your color variable */
+  color: var(--white);
+  border: 1px solid greenyellow;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-small);
+  cursor: wait;
+}
+
+input[type="submit"]:hover {
+  cursor: wait;
+  background-color: #037a50;
+  /* darker shade for hover */
+}
+
 body {
   background: var(--light);
   color: var(--dark);
@@ -36,8 +52,10 @@ a {
 
 p {
   text-align: justify;
-  hyphens: auto;/*enable hyphenation for better text flow */
-  overflow-wrap: anywhere;/*prevent overflow of long words */
+  hyphens: auto;
+  /*enable hyphenation for better text flow */
+  overflow-wrap: anywhere;
+  /*prevent overflow of long words */
 }
 
 footer {
@@ -55,7 +73,7 @@ h2 {
 }
 
 section {
-  scroll-margin-top: 70px; 
+  scroll-margin-top: 70px;
   margin-bottom: 2rem;
 }
 
@@ -73,8 +91,10 @@ header {
 nav {
   display: flex;
   position: sticky;
-  top: 0;/*keep sticky navbar to the top */
-  z-index: 1000;/*ensure navbar is above other content */
+  top: 0;
+  /*keep sticky navbar to the top */
+  z-index: 1000;
+  /*ensure navbar is above other content */
   justify-content: space-between;
   align-items: center;
   background: var(--dark);
@@ -91,7 +111,8 @@ nav .links {
   text-align: center;
   padding-bottom: 1rem;
   max-height: 0;
-  overflow: hidden;/*hide links when menu is collapsed */
+  overflow: hidden;
+  /*hide links when menu is collapsed */
   transition: max-height .3s ease;
 }
 
@@ -106,7 +127,8 @@ nav .links a {
 }
 
 nav .links a:hover {
-  background: #575757; /*hover effect for links */
+  background: #575757;
+  /*hover effect for links */
 }
 
 nav button {
@@ -141,7 +163,8 @@ aside {
 #chat-messages {
   width: 100%;
   max-height: 250px;
-  overflow-y: auto;/*scroll for overflow */
+  overflow-y: auto;
+  /*scroll for overflow */
   overflow-x: auto;
   padding: 0.5rem;
   background: white;
@@ -173,15 +196,12 @@ aside {
   transition: transform .25s ease;
 }
 
-.card:hover {
-  transform: translateY(-3px);/*slight lift on hover */
-}
-
 .card img {
   width: 20%;
   border-radius: var(--radius-small);
   position: relative;
-  left: 80%;/*position image to the right */
+  left: 80%;
+  /*position image to the right */
   top: -15%;
 }
 
@@ -199,6 +219,7 @@ aside {
   border-radius: var(--radius);
   font-size: 0.8rem;
 }
+
 /* Different widths and colors for each Progressbar */
 #games {
   width: 100%;
@@ -224,6 +245,7 @@ aside {
   width: 60%;
   background-color: rgb(5, 219, 95);
 }
+
 /* Skill Tags */
 .skill-list {
   display: flex;
@@ -258,7 +280,8 @@ aside {
 
 .timeline-item.visible {
   opacity: 1;
-  transform: translateX(0);/*slide in effect */
+  transform: translateX(0);
+  /*slide in effect */
 }
 
 .timeline-icon {
@@ -326,7 +349,8 @@ aside {
 /* Mobile */
 @media (min-width: 0px) {
   nav .links {
-    display: none;/*hide links by default on mobile */
+    display: none;
+    /*hide links by default on mobile */
     flex-direction: column;
     width: 100%;
     background: var(--dark);
@@ -343,17 +367,21 @@ aside {
   }
 
   aside {
-    display: none;/*hide aside on mobile */
+    display: none;
+    /*hide aside on mobile */
   }
 
   nav.active .links {
-    display: flex;/*show links when nav is active */
+    display: flex;
+    /*show links when nav is active */
   }
 
   nav .hamburger {
-    display: block;/*show hamburger menu on mobile */
+    display: block;
+    /*show hamburger menu on mobile */
   }
 }
+
 /* 800px VIEWPORT - Tablet Layout */
 
 @media (min-width: 800px) {
@@ -375,14 +403,17 @@ aside {
   }
 
   .cards {
-    grid-template-columns: 1fr 1.5fr 1fr;/*three columns with middle larger */
+    grid-template-columns: 1fr 1.5fr 1fr;
+    /*three columns with middle larger */
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
   .card:nth-child(2) {
-    background-color: var(--card-bg-highlight);/*highlight middle card */
-    transform: scale(1.05);/*slightly enlarge middle card */
+    background-color: var(--card-bg-highlight);
+    /*highlight middle card */
+    transform: scale(1.05);
+    /*slightly enlarge middle card */
   }
 
   aside {
@@ -397,7 +428,8 @@ aside {
 /* 1200px VIEWPORT - All three cards same size */
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: repeat(3, 1fr);/*three equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    /*three equal columns */
   }
 
   .card img {
@@ -413,7 +445,17 @@ aside {
   }
 
   .card:nth-child(2) {
-    transform: none;/* remove enlarge effect */
-    background-color: var(--card-bg-main);/*reset color */
+    transform: translateY(0);
+    /* remove enlarge effect */
+    background-color: var(--card-bg-main);
+    /*reset color */
   }
+}
+
+/*Needs to be loaded after the change effects of the*/
+.card:hover {
+  transform: translateY(-3px);
+  /*slight lift on hover */
+  background-color: #10f7d0;
+  /*slightly different shade on hover */
 }
