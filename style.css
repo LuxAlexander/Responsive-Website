@@ -20,6 +20,7 @@ body {
   color: var(--dark);
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  
 }
 
 a {
@@ -50,6 +51,9 @@ header {
 ========================================= */
 nav {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
   background: var(--dark);
@@ -93,6 +97,7 @@ main {
   grid-template-columns: 1fr;
   gap: 1.5rem;
   padding: 1.5rem;
+  word-break: break-word;
 }
 
 /* Aside (chat) hidden until desktop) */
@@ -290,7 +295,7 @@ aside {
 }
 
 /* Mobile Navbar */
-@media (min-width: 400px) {
+@media (min-width: 0px) {
   nav .links {
     display: none;
     flex-direction: column;
@@ -346,6 +351,8 @@ aside {
 
   .cards {
     grid-template-columns: 1fr 1.5fr 1fr;
+    margin-top: 10px ;
+    margin-bottom: 10px ;
   }
 
   .card:nth-child(2) {
